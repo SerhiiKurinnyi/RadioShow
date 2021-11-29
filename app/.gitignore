@@ -1,2 +1,3 @@
 *.app
-.vscode\.alcache
+**.vscode/.alcache
+**.alpackages/*.app
