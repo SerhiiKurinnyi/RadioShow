@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="es-ES" original="RadioShow">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 1851945277 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Radio Show</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RSH Radio Show - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1851945277 - Field 3326131828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Advertising Revenue</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RSH Radio Show - Field Advertising Revenue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1851945277 - Field 3605388587 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Audience Share</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RSH Radio Show - Field Audience Share - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1851945277 - Field 3711522514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Average Listeners </source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RSH Radio Show - Field Average Listeners - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1851945277 - Field 521091233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Host Name</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RSH Radio Show - Field Host Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1851945277 - Field 142882545 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Host No.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RSH Radio Show - Field Host No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1851945277 - Field 2961552353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RSH Radio Show - Field Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1851945277 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Code."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RSH Radio Show - Field No. - Property Caption</note>
+          <target>Code.</target>
+        </trans-unit>
+        <trans-unit id="Table 1851945277 - Field 702636862 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Radio Show Type</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RSH Radio Show - Field Radio Show Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1851945277 - Field 2258054225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Royalty Cost</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RSH Radio Show - Field Royalty Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1851945277 - Field 3491367632 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Run Time</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RSH Radio Show - Field Run Time - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 496457537 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Radio Show</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 496457537 - Control 3326131828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Advertising Revenue field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show Card - Control Advertising Revenue - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 496457537 - Control 3605388587 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Audience Share field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show Card - Control Audience Share - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 496457537 - Control 3711522514 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Average Listeners  field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show Card - Control Average Listeners - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 496457537 - Control 521091233 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Host Name field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show Card - Control Host Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 496457537 - Control 142882545 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Host No. field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show Card - Control Host No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 496457537 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Name field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show Card - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 496457537 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the No. field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show Card - Control No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 496457537 - Control 702636862 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Radio Show Type field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show Card - Control Radio Show Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 496457537 - Control 2258054225 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Royalty Cost field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show Card - Control Royalty Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 496457537 - Control 3491367632 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Run Time field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show Card - Control Run Time - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4277452499 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Radio Shows List</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4277452499 - Control 3326131828 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Advertising Revenue field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show List - Control Advertising Revenue - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4277452499 - Control 3605388587 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Audience Share field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show List - Control Audience Share - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4277452499 - Control 3711522514 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Average Listeners  field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show List - Control Average Listeners - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4277452499 - Control 521091233 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Host Name field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show List - Control Host Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4277452499 - Control 142882545 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Host No. field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show List - Control Host No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4277452499 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Name field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show List - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4277452499 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the No. field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show List - Control No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4277452499 - Control 702636862 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Radio Show Type field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show List - Control Radio Show Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4277452499 - Control 2258054225 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Royalty Cost field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show List - Control Royalty Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4277452499 - Control 3491367632 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Run Time field.</source>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RSH Radio Show List - Control Run Time - Property ToolTip</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
