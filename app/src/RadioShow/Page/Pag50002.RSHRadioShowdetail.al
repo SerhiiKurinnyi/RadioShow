@@ -1,26 +1,23 @@
 page 50002 "RSH Radio Show detail"
 {
-
-    ApplicationArea = All;
     Caption = 'RSH Radio Show detail';
-    PageType = List;
+    PageType = ListPart;
     SourceTable = "RSH Radio Show detail";
-    UsageCategory = Lists;
-
+    AutoSplitKey = true;
     layout
     {
         area(content)
         {
             repeater(General)
             {
-                field("Code"; Rec."Code")
-                {
-                    ToolTip = 'Specifies the value of the Code field.';
-                    ApplicationArea = All;
-                }
                 field("Radion Show No."; Rec."Radion Show No.")
                 {
                     ToolTip = 'Specifies the value of the Radion Show No. field.';
+                    ApplicationArea = All;
+                }
+                field(Description; Rec.Description)
+                {
+                    ToolTip = 'Specifies the value of the Description field.';
                     ApplicationArea = All;
                 }
             }

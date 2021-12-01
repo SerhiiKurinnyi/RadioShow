@@ -173,9 +173,9 @@ table 50000 "RSH Radio Show"
 
     trigger OnDelete()
     var
-        DeleteErr: Label 'You cannot delete this record!';
+        RSHRadionShowMgt: Report "RSH Radion Show Mgt.";
     begin
-        Error(DeleteErr);
+        RSHRadionShowMgt.DeleteRadioShowdetail(Rec."No.");
     end;
 
     local procedure InitInsert()

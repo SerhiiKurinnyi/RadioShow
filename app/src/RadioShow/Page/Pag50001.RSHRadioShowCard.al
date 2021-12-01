@@ -128,6 +128,32 @@ page 50001 "RSH Radio Show Card"
                     ApplicationArea = All;
                 }
             }
+            part(SalesLines; "RSH Radio Show detail")
+            {
+                ApplicationArea = All;
+                SubPageLink = "Radion Show No." = FIELD("No.");
+                UpdatePropagation = Both;
+            }
+        }
+    }
+    actions
+    {
+        area(Processing)
+        {
+            action(ActionName)
+            {
+                ApplicationArea = All;
+                RunObject = codeunit "Sales Post via Job Queue";
+
+                trigger OnAction()
+                var
+                    JobQueueEntry: Record "Job Queue Entry";
+                    SalesPostviaJobQueue: Codeunit "Sales Post via Job Queue";
+                begin
+                    Codeunit.Run(codeunit::"Sales Post via Job Queue");
+                    SalesPostviaJobQueue.Run(JobQueueEntry);
+                end;
+            }
         }
     }
 }

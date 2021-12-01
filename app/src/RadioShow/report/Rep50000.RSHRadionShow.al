@@ -3,8 +3,8 @@ report 50000 "RSH Radion Show"
     ApplicationArea = All;
     Caption = 'Radion Show';
     UsageCategory = ReportsAndAnalysis;
-    WordLayout = 'src\layout\RadioShow.docx';
-    RDLCLayout = 'src\layout\RadioShow.rdlc';
+    WordLayout = 'src\RadioShow\layout\RadioShow.docx';
+    RDLCLayout = 'src\RadioShow\layout\RadioShow.rdlc';
     DefaultLayout = RDLC;
 
     dataset
