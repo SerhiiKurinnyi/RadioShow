@@ -8,5 +8,12 @@
     "CRS.ObjectNamePrefix": "RSH ",
     "CRS.ObjectNameSuffix": "",
     "CRS.RemoveSuffixFromFilename": false,
-    "CRS.RemovePrefixFromFilename": false
+    "al.ruleSetPath": "./ruleset.json",
+    "al.enableCodeAnalysis": true,
+    "al.codeAnalyzers": [
+        "${CodeCop}",
+        "${PerTenantExtensionCop}", //not for ISV
+        //"${AppSourceCop}", for ISV
+        "${UICop}" 
+    ],
 }
