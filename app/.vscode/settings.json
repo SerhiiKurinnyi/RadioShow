@@ -12,8 +12,8 @@
     "al.enableCodeAnalysis": true,
     "al.codeAnalyzers": [
         "${CodeCop}",
-        "${PerTenantExtensionCop}", //not for ISV
-        //"${AppSourceCop}", for ISV
+        "${PerTenantExtensionCop}", // not for ISV
+        // "${AppSourceCop}", // for ISV
         "${UICop}" 
     ],
 }
