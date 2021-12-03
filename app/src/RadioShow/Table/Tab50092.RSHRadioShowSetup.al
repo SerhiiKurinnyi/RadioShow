@@ -1,4 +1,4 @@
-table 50002 "RSH Radio Show Setup"
+table 50092 "RSH Radio Show Setup"
 {
     Caption = 'Radio Show Setup';
     DataClassification = ToBeClassified;

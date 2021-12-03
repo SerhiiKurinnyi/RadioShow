@@ -26,6 +26,7 @@ table 50000 "RSH Radio Show"
         }
         field(10; "Radio Show Type"; Code[10])
         {
+            TableRelation = "RSH Radio Show Type";
             Caption = 'Radio Show Type';
             DataClassification = CustomerContent;
             Editable = false;
@@ -109,6 +110,7 @@ table 50000 "RSH Radio Show"
         }
         field(1030; "News Required"; Boolean)
         {
+            InitValue = true;
             Caption = 'News Required';
             DataClassification = CustomerContent;
         }
