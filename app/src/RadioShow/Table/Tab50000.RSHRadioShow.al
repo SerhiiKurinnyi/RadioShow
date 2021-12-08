@@ -228,7 +228,7 @@ table 50000 "RSH Radio Show"
         testTxt: text;
 
 
-    [IntegrationEvent(TRUE, T   RUE)]
+    [IntegrationEvent(TRUE, TRUE)]
     local procedure MyProcedure()
     begin
     end;
