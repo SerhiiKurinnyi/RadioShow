@@ -3,7 +3,6 @@ page 50001 "RSH Radio Show Card"
     Caption = 'Radio Show';
     PageType = Card;
     SourceTable = "RSH Radio Show";
-
     layout
     {
         area(content)
@@ -26,6 +25,8 @@ page 50001 "RSH Radio Show Card"
                     ToolTip = 'Specifies the value of the Name field.';
                     ApplicationArea = All;
                     Visible = true;
+                    NotBlank = true;
+                    ShowMandatory = true;
                 }
                 field("Run Time"; Rec."Run Time")
                 {
@@ -127,12 +128,16 @@ page 50001 "RSH Radio Show Card"
                     ToolTip = 'Specifies the value of the SystemCreatedAt field.';
                     ApplicationArea = All;
                 }
+                field(Email; Rec.Email)
+                {
+                    ToolTip = 'Specifies the value of the Emailr field.';
+                    ApplicationArea = All;
+                }
             }
             part(SalesLines; "RSH Radio Show detail")
             {
                 ApplicationArea = All;
                 SubPageLink = "Radion Show No." = FIELD("No.");
-                UpdatePropagation = Both;
             }
         }
     }

@@ -11,6 +11,7 @@ table 50000 "RSH Radio Show"
         {
             Caption = 'No.', comment = 'ESP="Code."';
             DataClassification = CustomerContent;
+            NotBlank = true;
 
             trigger OnValidate()
             var
@@ -35,10 +36,11 @@ table 50000 "RSH Radio Show"
         {
             Caption = 'Name';
             DataClassification = CustomerContent;
+            NotBlank = true;
         }
         field(21; "Name 2"; Text[50])
         {
-            Caption = 'Name 3';
+            Caption = 'Name 2';
             DataClassification = CustomerContent;
         }
         field(22; "Name 3"; Text[50])
@@ -86,6 +88,7 @@ table 50000 "RSH Radio Show"
             Caption = 'No. Series';
             Editable = false;
             TableRelation = "No. Series";
+            DataClassification = CustomerContent;
         }
         field(1000; Frequency; Option)
         {
@@ -144,6 +147,12 @@ table 50000 "RSH Radio Show"
             Caption = 'Date Filter';
             FieldClass = FlowFilter;
         }
+        field(2000; Email; Text[50])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Email';
+            ExtendedDatatype = Masked;
+        }
     }
     keys
     {
@@ -170,7 +179,7 @@ table 50000 "RSH Radio Show"
     }
     trigger OnInsert()
     begin
-        InitInsert();
+        //InitInsert();
     end;
 
     trigger OnDelete()

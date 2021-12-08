@@ -6,5 +6,10 @@ codeunit 50000 "RSH Radion Show Mgt."
     begin
         RSHRadioShowdetail.SetRange("Radion Show No.", RadionShowNo);
         RSHRadioShowdetail.DeleteAll(true);
+        Customer.init();
+        Customer."No." := '';
     end;
+
+    var
+        Customer: Record Customer;
 }
