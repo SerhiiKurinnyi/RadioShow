@@ -1,9 +1,11 @@
-page 50002 "RSH Radio Show detail"
+page 50008 "RSH Posted Radio Show detail"
 {
-    Caption = 'RSH Radio Show detail';
+    Caption = 'RSH Posted Radio Show detail';
     PageType = ListPart;
-    SourceTable = "RSH Radio Show detail";
+    SourceTable = "RSH Posted Radio Show detail";
     AutoSplitKey = true;
+    DeleteAllowed = false;
+
     layout
     {
         area(content)

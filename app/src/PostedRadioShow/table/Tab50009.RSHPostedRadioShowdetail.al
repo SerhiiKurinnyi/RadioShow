@@ -1,6 +1,6 @@
-table 50091 "RSH Radio Show detail"
+table 50009 "RSH Posted Radio Show detail"
 {
-    Caption = 'Radio Show detail';
+    Caption = 'Posted Radio Show detail';
     DataClassification = CustomerContent;
 
     fields
@@ -9,11 +9,12 @@ table 50091 "RSH Radio Show detail"
         {
             Caption = 'Radion Show No.';
             DataClassification = CustomerContent;
-            TableRelation = "RSH Radio Show"."No.";
+            TableRelation = "RSH Posted Radio Show"."No.";
         }
         field(2; "Line No."; Integer)
         {
             DataClassification = CustomerContent;
+            Caption = 'Line No.';
         }
         field(10; Description; Text[250])
         {

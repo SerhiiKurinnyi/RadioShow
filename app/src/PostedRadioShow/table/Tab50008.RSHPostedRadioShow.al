@@ -1,6 +1,6 @@
-table 50000 "RSH Radio Show"
+table 50008 "RSH Posted Radio Show"
 {
-    Caption = 'Radio Show';
+    Caption = 'Posted Radio Show';
     DataClassification = CustomerContent;
     LookupPageId = "RSH Radio Show List";
     DrillDownPageId = "RSH Radio Show List";
@@ -11,6 +11,7 @@ table 50000 "RSH Radio Show"
         {
             Caption = 'No.', comment = 'ESP="Code."';
             DataClassification = CustomerContent;
+            NotBlank = true;
 
             trigger OnValidate()
             var
@@ -191,13 +192,6 @@ table 50000 "RSH Radio Show"
         InitInsert();
     end;
 
-    trigger OnDelete()
-    var
-        RSHRadionShowMgt: Report "RSH Radion Show Mgt.";
-    begin
-        RSHRadionShowMgt.DeleteRadioShowdetail(Rec."No.");
-    end;
-
     local procedure InitInsert()
     var
         RadioShowSetup: Record "RSH Radio Show Setup";
@@ -224,12 +218,4 @@ table 50000 "RSH Radio Show"
         //     Error(RadioShowNosErr, RadioShowSetup.FieldCaption("Radio Show Nos."), RadioShowSetup.TableCaption());
     end;
 
-    var
-        testTxt: text;
-
-
-    [IntegrationEvent(TRUE, T   RUE)]
-    local procedure MyProcedure()
-    begin
-    end;
 }

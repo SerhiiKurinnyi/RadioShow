@@ -13,5 +13,7 @@ permissionset 50000 "RSH Radio Show PSet"
         tabledata "RSH Playlist Header" = rimd,
         tabledata "RSH Playlist Line" = rimd,
         tabledata "RSH Playlist Item Rate" = rimd,
-     tabledata "RSH Radio Show Entry" = rimd;
+        tabledata "RSH Radio Show Entry" = rimd,
+        tabledata "RSH Posted Radio Show detail" = rimd,
+        tabledata "RSH Posted Radio Show" = rimd;
 }

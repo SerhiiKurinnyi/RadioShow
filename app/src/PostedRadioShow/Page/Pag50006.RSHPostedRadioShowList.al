@@ -1,14 +1,20 @@
-page 50001 "RSH Radio Show Card"
+page 50006 "RSH Posted Radio Show List"
 {
-    Caption = 'Radio Show';
-    PageType = Card;
-    SourceTable = "RSH Radio Show";
-    PromotedActionCategories = 'New,Process,Report,Approve,Release,Posting,Prepare,Order,Request Approval,History,Print/Send,Navigate';
+    Caption = 'Posted Radio Shows List';
+    PageType = List;
+    SourceTable = "RSH Posted Radio Show";
+    ApplicationArea = All;
+    UsageCategory = Lists;
+    CardPageId = "RSH Posted Radio Show Card";
+    SourceTableView = sorting("Royalty Cost", "Advertising Revenue");
+    Editable = false;
+    DeleteAllowed = false;
+
     layout
     {
         area(content)
         {
-            group(General)
+            repeater(General)
             {
                 field("No."; Rec."No.")
                 {
@@ -19,25 +25,24 @@ page 50001 "RSH Radio Show Card"
                 {
                     ToolTip = 'Specifies the value of the Radio Show Type field.';
                     ApplicationArea = All;
-                    Editable = true;
                 }
                 field(Name; Rec.Name)
                 {
                     ToolTip = 'Specifies the value of the Name field.';
                     ApplicationArea = All;
                     Visible = true;
-                    NotBlank = true;
-                    ShowMandatory = true;
                 }
                 field("Run Time"; Rec."Run Time")
                 {
                     ToolTip = 'Specifies the value of the Run Time field.';
                     ApplicationArea = All;
+                    Visible = false;
                 }
                 field("Host No."; Rec."Host No.")
                 {
                     ToolTip = 'Specifies the value of the Host No. field.';
                     ApplicationArea = All;
+                    Visible = ShowCustField;
                 }
                 field("Host Name"; Rec."Host Name")
                 {
@@ -79,12 +84,12 @@ page 50001 "RSH Radio Show Card"
                     ToolTip = 'Specifies the value of the Frequency field.';
                     ApplicationArea = All;
                 }
-                field("Name 3"; Rec."Name 3")
+                field("Name 2"; Rec."Name 2")
                 {
                     ToolTip = 'Specifies the value of the Name 3 field.';
                     ApplicationArea = All;
                 }
-                field("Name 2"; Rec."Name 2")
+                field("Name 3"; Rec."Name 3")
                 {
                     ToolTip = 'Specifies the value of the Name 3 field.';
                     ApplicationArea = All;
@@ -97,6 +102,11 @@ page 50001 "RSH Radio Show Card"
                 field("News Required"; Rec."News Required")
                 {
                     ToolTip = 'Specifies the value of the News Required field.';
+                    ApplicationArea = All;
+                }
+                field("No. Series"; Rec."No. Series")
+                {
+                    ToolTip = 'Specifies the value of the No. Series field.';
                     ApplicationArea = All;
                 }
                 field("PSA Planned Quantity"; Rec."PSA Planned Quantity")
@@ -114,60 +124,17 @@ page 50001 "RSH Radio Show Card"
                     ToolTip = 'Specifies the value of the Sports Required field.';
                     ApplicationArea = All;
                 }
-                field("Weather Required"; Rec."Weather Required")
-                {
-                    ToolTip = 'Specifies the value of the Weather Required field.';
-                    ApplicationArea = All;
-                }
-                field("Weather Duration"; Rec."Weather Duration")
-                {
-                    ToolTip = 'Specifies the value of the Weather Duration field.';
-                    ApplicationArea = All;
-                }
-                field(SystemCreatedAt; Rec.SystemCreatedAt)
-                {
-                    ToolTip = 'Specifies the value of the SystemCreatedAt field.';
-                    ApplicationArea = All;
-                }
-                field(Email; Rec.Email)
-                {
-                    ToolTip = 'Specifies the value of the Emailr field.';
-                    ApplicationArea = All;
-                }
-            }
-            part(SalesLines; "RSH Radio Show detail")
-            {
-                ApplicationArea = All;
-                SubPageLink = "Radion Show No." = FIELD("No.");
             }
         }
     }
-    actions
-    {
-        area(Processing)
-        {
-            action(Post)
-            {
-                ApplicationArea = Basic, Suite;
-                Caption = 'P&ost';
-                Ellipsis = true;
-                Image = PostOrder;
-                Promoted = true;
-                PromotedCategory = Category6;
-                PromotedIsBig = true;
-                ShortCutKey = 'F9';
-                ToolTip = 'Finalize the document';
 
-                AboutTitle = 'Posting the order';
-                AboutText = 'Posting will post the quantities on the order.';
+    trigger OnOpenPage()
+    begin
+        Rec.SetCurrentKey("Royalty Cost", "Advertising Revenue");
+        ShowCustField := true;
+    end;
 
-                trigger OnAction()
-                var
-                    RSHPostRadionShow: Codeunit "RSH Post Radion Show";
-                begin
-                    RSHPostRadionShow.PostRadioShow(Rec);
-                end;
-            }
-        }
-    }
+    var
+        v: Record AllObjWithCaption;
+        ShowCustField: Boolean;
 }

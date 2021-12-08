@@ -1,15 +1,17 @@
-page 50001 "RSH Radio Show Card"
+page 50007 "RSH Posted Radio Show Card"
 {
-    Caption = 'Radio Show';
+    Caption = 'Posted Radio Show';
     PageType = Card;
-    SourceTable = "RSH Radio Show";
-    PromotedActionCategories = 'New,Process,Report,Approve,Release,Posting,Prepare,Order,Request Approval,History,Print/Send,Navigate';
+    SourceTable = "RSH Posted Radio Show";
+    DeleteAllowed = false;
+
     layout
     {
         area(content)
         {
             group(General)
             {
+                Editable = false;
                 field("No."; Rec."No.")
                 {
                     ToolTip = 'Specifies the value of the No. field.';
@@ -135,10 +137,11 @@ page 50001 "RSH Radio Show Card"
                     ApplicationArea = All;
                 }
             }
-            part(SalesLines; "RSH Radio Show detail")
+            part(SalesLines; "RSH Posted Radio Show detail")
             {
                 ApplicationArea = All;
                 SubPageLink = "Radion Show No." = FIELD("No.");
+                Editable = false;
             }
         }
     }
@@ -146,26 +149,18 @@ page 50001 "RSH Radio Show Card"
     {
         area(Processing)
         {
-            action(Post)
+            action(ActionName)
             {
-                ApplicationArea = Basic, Suite;
-                Caption = 'P&ost';
-                Ellipsis = true;
-                Image = PostOrder;
-                Promoted = true;
-                PromotedCategory = Category6;
-                PromotedIsBig = true;
-                ShortCutKey = 'F9';
-                ToolTip = 'Finalize the document';
-
-                AboutTitle = 'Posting the order';
-                AboutText = 'Posting will post the quantities on the order.';
+                ApplicationArea = All;
+                RunObject = codeunit "Sales Post via Job Queue";
 
                 trigger OnAction()
                 var
-                    RSHPostRadionShow: Codeunit "RSH Post Radion Show";
+                    JobQueueEntry: Record "Job Queue Entry";
+                    SalesPostviaJobQueue: Codeunit "Sales Post via Job Queue";
                 begin
-                    RSHPostRadionShow.PostRadioShow(Rec);
+                    Codeunit.Run(codeunit::"Sales Post via Job Queue");
+                    SalesPostviaJobQueue.Run(JobQueueEntry);
                 end;
             }
         }
