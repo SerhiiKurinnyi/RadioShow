@@ -30,6 +30,16 @@ page 50002 "RSH Radio Show detail"
                     ToolTip = 'Specifies the value of the End Date field.';
                     ApplicationArea = All;
                 }
+                field(Qty; Rec.Qty)
+                {
+                    ToolTip = 'Specifies the value of the Qty field.';
+                    ApplicationArea = All;
+                }
+                field(Duretion; Rec.Duretion)
+                {
+                    ToolTip = 'Specifies the value of the Duretion field.';
+                    ApplicationArea = All;
+                }
             }
         }
     }

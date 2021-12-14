@@ -162,6 +162,53 @@ table 50000 "RSH Radio Show"
             Caption = 'Email';
             ExtendedDatatype = Masked;
         }
+        field(2010; "Item No."; Code[20])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Item No.';
+            TableRelation = Item."No.";
+
+            trigger OnValidate()
+            begin
+                OnValidateItemNo();
+            end;
+
+            trigger OnLookup()
+            var
+                Item: Record Item;
+            begin
+                if page.RunModal(0, Item) in [action::LookupOK, action::OK] then
+                    Rec.Validate("Item No.", Item."No.");
+            end;
+        }
+        field(2015; "Item Description"; Text[50])
+        {
+            FieldClass = FlowField;
+            CalcFormula = lookup(Item.Description where("No." = field("Item No.")));
+            Caption = 'Item Description';
+            Editable = false;
+        }
+        field(2020; "Detail Average Qty"; Decimal)
+        {
+            FieldClass = FlowField;
+            CalcFormula = average("RSH Radio Show detail".Qty where("Radion Show No." = field("No.")));
+            Caption = 'Detail Average Qty';
+            Editable = false;
+        }
+        field(2030; "Detail count Qty"; Integer)
+        {
+            FieldClass = FlowField;
+            CalcFormula = count("RSH Radio Show detail" where("Radion Show No." = field("No.")));
+            Caption = 'Detail count Qty';
+            Editable = false;
+        }
+        field(2040; "Detail sum Qty"; Decimal)
+        {
+            FieldClass = FlowField;
+            CalcFormula = sum("RSH Radio Show detail".Qty where("Radion Show No." = field("No.")));
+            Caption = 'Detail sum Qty';
+            Editable = false;
+        }
     }
     keys
     {
@@ -222,6 +269,24 @@ table 50000 "RSH Radio Show"
 
         // if RadioShowSetup."Radio Show Nos." = '' then
         //     Error(RadioShowNosErr, RadioShowSetup.FieldCaption("Radio Show Nos."), RadioShowSetup.TableCaption());
+    end;
+
+    local procedure OnValidateItemNo()
+    var
+        Item: Record Item;
+    begin
+        if Rec."Item No." = '' then
+            Rec.Validate(Name, '')
+        else begin
+            Item.get(Rec."Item No.");
+            CopyFromItem(Item);
+        end;
+        Rec.CalcFields("Item Description");
+    end;
+
+    local procedure CopyFromItem(Item: Record Item)
+    begin
+        Rec.Validate(Name, Item.Description);
     end;
 
     var

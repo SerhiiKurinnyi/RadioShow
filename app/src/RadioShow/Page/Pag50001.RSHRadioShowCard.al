@@ -134,6 +134,31 @@ page 50001 "RSH Radio Show Card"
                     ToolTip = 'Specifies the value of the Emailr field.';
                     ApplicationArea = All;
                 }
+                field("Item No."; Rec."Item No.")
+                {
+                    ToolTip = 'Specifies the value of the Item No. field.';
+                    ApplicationArea = All;
+                }
+                field("Item Description"; Rec."Item Description")
+                {
+                    ToolTip = 'Specifies the value of the Item Description field.';
+                    ApplicationArea = All;
+                }
+                field("Detail Average Qty"; Rec."Detail Average Qty")
+                {
+                    ToolTip = 'Specifies the value of the Detail Average Qty field.';
+                    ApplicationArea = All;
+                }
+                field("Detail count Qty"; Rec."Detail count Qty")
+                {
+                    ToolTip = 'Specifies the value of the Detail count Qty field.';
+                    ApplicationArea = All;
+                }
+                field("Detail sum Qty"; Rec."Detail sum Qty")
+                {
+                    ToolTip = 'Specifies the value of the Detail sum Qty field.';
+                    ApplicationArea = All;
+                }
             }
             part(SalesLines; "RSH Radio Show detail")
             {

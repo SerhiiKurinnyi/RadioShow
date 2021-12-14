@@ -26,5 +26,6 @@
     "includeSourceInSymbolFile": true
   },
   "runtime": "8.0",
-  "features": ["TranslationFile"]
+  "features": ["TranslationFile"],
+  "target": "Cloud"
 }
