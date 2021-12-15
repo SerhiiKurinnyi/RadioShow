@@ -7,7 +7,6 @@ page 50000 "RSH Radio Show List"
     UsageCategory = Lists;
     CardPageId = "RSH Radio Show Card";
     SourceTableView = sorting("Royalty Cost", "Advertising Revenue");
-    Editable = false;
 
     layout
     {

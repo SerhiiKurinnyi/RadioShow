@@ -159,6 +159,21 @@ page 50001 "RSH Radio Show Card"
                     ToolTip = 'Specifies the value of the Detail sum Qty field.';
                     ApplicationArea = All;
                 }
+                field("Customer No."; Rec."Customer No.")
+                {
+                    ToolTip = 'Specifies the value of the Customer No. field.';
+                    ApplicationArea = All;
+                }
+                field(Discount; Rec.Discount)
+                {
+                    ToolTip = 'Specifies the value of the Discount field.';
+                    ApplicationArea = All;
+                }
+                field("Customer Name"; Rec."Customer Name")
+                {
+                    ToolTip = 'Specifies the value of the Customer No. field.';
+                    ApplicationArea = All;
+                }
             }
             part(SalesLines; "RSH Radio Show detail")
             {

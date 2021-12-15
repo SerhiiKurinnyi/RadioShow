@@ -166,20 +166,14 @@ table 50000 "RSH Radio Show"
         {
             DataClassification = CustomerContent;
             Caption = 'Item No.';
-            TableRelation = Item."No.";
+            TableRelation = Item."No." where("RSH Rental" = const(true));
 
             trigger OnValidate()
             begin
+                SetDiscount();
                 OnValidateItemNo();
             end;
 
-            trigger OnLookup()
-            var
-                Item: Record Item;
-            begin
-                if page.RunModal(0, Item) in [action::LookupOK, action::OK] then
-                    Rec.Validate("Item No.", Item."No.");
-            end;
         }
         field(2015; "Item Description"; Text[50])
         {
@@ -208,6 +202,31 @@ table 50000 "RSH Radio Show"
             CalcFormula = sum("RSH Radio Show detail".Qty where("Radion Show No." = field("No.")));
             Caption = 'Detail sum Qty';
             Editable = false;
+        }
+        field(2050; "Customer No."; Code[20])
+        {
+            Caption = 'Customer No.';
+            DataClassification = CustomerContent;
+            TableRelation = Customer;
+
+            trigger OnValidate()
+            begin
+                SetDiscount();
+            end;
+        }
+        field(2055; "Customer Name"; text[100])
+        {
+            Caption = 'Customer No.';
+            DataClassification = CustomerContent;
+            TableRelation = Customer.Name;
+            ValidateTableRelation = false;
+        }
+        field(2060; Discount; Decimal)
+        {
+            Caption = 'Discount';
+            DataClassification = CustomerContent;
+            MinValue = 0;
+            MaxValue = 100;
         }
     }
     keys
@@ -266,8 +285,8 @@ table 50000 "RSH Radio Show"
             Commit();
         end;
         RadioShowSetup.TestField("Radio Show Nos.");
-
-        // if RadioShowSetup."Radio Show Nos." = '' then
+        IF true THEN;
+        // if RadioShowSetup."Radio Show Nos    ." = '' then
         //     Error(RadioShowNosErr, RadioShowSetup.FieldCaption("Radio Show Nos."), RadioShowSetup.TableCaption());
     end;
 
@@ -287,6 +306,24 @@ table 50000 "RSH Radio Show"
     local procedure CopyFromItem(Item: Record Item)
     begin
         Rec.Validate(Name, Item.Description);
+    end;
+
+    local procedure SetDiscount()
+    var
+        Customer: Record Customer;
+        Item: Record Item;
+    begin
+        if Rec."Customer No." <> '' then
+            Customer.get("Customer No.");
+
+        if Rec."Item No." <> '' then
+            Item.get("Item No.");
+
+        Rec.Discount := Item."RSH Car Discount";
+
+        if Customer."RSH Car Discount" > Item."RSH Car Discount" then
+            Rec.Discount := Customer."RSH Car Discount";
+        Rec.Validate(Discount);
     end;
 
     var
