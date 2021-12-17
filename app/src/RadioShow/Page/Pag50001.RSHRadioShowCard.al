@@ -208,6 +208,17 @@ page 50001 "RSH Radio Show Card"
                     RSHPostRadionShow.PostRadioShow(Rec);
                 end;
             }
+            action(ExportImportRadionShow)
+            {
+                Caption = 'Export\Import Radion Show';
+                ApplicationArea = All;
+                RunObject = xmlport "RSH RadioShow";
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                PromotedOnly = true;
+                Image = Export;
+            }
         }
     }
 }

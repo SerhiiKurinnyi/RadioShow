@@ -35,6 +35,16 @@ page 50002 "RSH Radio Show detail"
                     ToolTip = 'Specifies the value of the Qty field.';
                     ApplicationArea = All;
                 }
+                field(Amount; Rec.Amount)
+                {
+                    ToolTip = 'Specifies the value of the Amount field.';
+                    ApplicationArea = All;
+                }
+                field("Total Amount"; Rec."Total Amount")
+                {
+                    ToolTip = 'Specifies the value of the Total Amount field.';
+                    ApplicationArea = All;
+                }
                 field(Duretion; Rec.Duretion)
                 {
                     ToolTip = 'Specifies the value of the Duretion field.';

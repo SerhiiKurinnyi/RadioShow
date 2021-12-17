@@ -45,11 +45,32 @@ table 50091 "RSH Radio Show detail"
         {
             Caption = 'Qty';
             DataClassification = CustomerContent;
+
+            trigger OnValidate()
+            begin
+                CalcTotalAmt();
+            end;
         }
         field(40; Duretion; Integer)
         {
             Caption = 'Duretion';
             DataClassification = CustomerContent;
+        }
+        field(50; Amount; Decimal)
+        {
+            Caption = 'Amount';
+            DataClassification = CustomerContent;
+
+            trigger OnValidate()
+            begin
+                CalcTotalAmt();
+            end;
+        }
+        field(60; "Total Amount"; Decimal)
+        {
+            Caption = 'Total Amount';
+            DataClassification = CustomerContent;
+            Editable = false;
         }
     }
     keys
@@ -67,5 +88,10 @@ table 50091 "RSH Radio Show detail"
             Duretion := 0
         else
             Duretion := Rec."End Date" - Rec."Starting Date";
+    end;
+
+    local procedure CalcTotalAmt()
+    begin
+        Rec."Total Amount" := Rec.Amount * Rec.Qty;
     end;
 }
