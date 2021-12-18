@@ -174,11 +174,17 @@ page 50001 "RSH Radio Show Card"
                     ToolTip = 'Specifies the value of the Customer No. field.';
                     ApplicationArea = All;
                 }
+                field("Total Amount"; Rec."Total Amount")
+                {
+                    ToolTip = 'Specifies the value of the Total Amount field.';
+                    ApplicationArea = All;
+                }
             }
             part(SalesLines; "RSH Radio Show detail")
             {
                 ApplicationArea = All;
                 SubPageLink = "Radion Show No." = FIELD("No.");
+                UpdatePropagation = Both;
             }
         }
     }

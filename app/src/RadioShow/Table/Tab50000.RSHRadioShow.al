@@ -228,6 +228,13 @@ table 50000 "RSH Radio Show"
             MinValue = 0;
             MaxValue = 100;
         }
+        field(2070; "Total Amount"; Decimal)
+        {
+            Caption = 'Total Amount';
+            FieldClass = FlowField;
+            CalcFormula = sum("RSH Radio Show detail"."Total Amount" where("Radion Show No." = field("No.")));
+            Editable = false;
+        }
     }
     keys
     {
